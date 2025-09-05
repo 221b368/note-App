@@ -3,7 +3,6 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"; 
 import { getAnalytics } from "firebase/analytics"; 
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBV-45VPMvxu8WjNKYqQs3USNwid10gZhs",
     authDomain: "mountain-note-app.firebaseapp.com",

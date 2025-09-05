@@ -1,6 +1,6 @@
 import { Alert, AppBar, Box, Card, CardContent, Divider, Grid, IconButton, Pagination, TextField, Toolbar, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import "../style/AllNotes.css"
+import "../style/allNotes.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllByDisplayName, getAllByHeaderOrContentContains } from '../redux/slices/noteSlice'
 import { auth } from "../Firebase"
