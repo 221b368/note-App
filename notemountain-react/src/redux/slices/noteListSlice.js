@@ -8,42 +8,42 @@ const initialState = {
 
 export const getNoteListsByDisplayName = createAsyncThunk("noteLists/getAllByDisplayName",
     async (displayName) => {
-        const response = await axios.get("http://localhost:8080/notelist/getallbydisplayname?displayName=" + displayName)
+        const response = await axios.get("https://note-app-production-35a0.up.railway.app/notelist/getallbydisplayname?displayName=" + displayName)
         return response.data
     }
 )
 
 export const addNoteList = createAsyncThunk("noteLists/addNoteList",
     async (noteList) => {
-        const response = await axios.post("http://localhost:8080/notelist/add", noteList)
+        const response = await axios.post("https://note-app-production-35a0.up.railway.app/notelist/add", noteList)
         return response.data
     }
 )
 
 export const getNoteListByNoteListId = createAsyncThunk("noteList/getNoteListByNoteListId",
     async (id) => {
-        const response = await axios.get("http://localhost:8080/notelist/getbyid?id=" + id)
+        const response = await axios.get("https://note-app-production-35a0.up.railway.app/notelist/getbyid?id=" + id)
         return response.data
     }
 )
 
 export const deleteNoteListByNoteListId = createAsyncThunk("noteLists/getNoteListByNoteListId",
     async (id) => {
-        await axios.delete("http://localhost:8080/notelist/deletebyid?id=" + id)
+        await axios.delete("https://note-app-production-35a0.up.railway.app/notelist/deletebyid?id=" + id)
         return id
     }
 )
 
 export const renameNoteListName = createAsyncThunk("noteLists/renameNoteListName",
     async (noteList) => {
-        const response = await axios.put(`http://localhost:8080/notelist/updatebyid?id=${noteList.id}`, noteList)
+        const response = await axios.put(`https://note-app-production-35a0.up.railway.app/notelist/updatebyid?id=${noteList.id}`, noteList)
         return response.data
     }
 )
 
 export const deleteAllNoteListsByDisplayName = createAsyncThunk("noteLists/deleteAllByDisplayName",
     async (displayName) => {
-        await axios.delete(`http://localhost:8080/notelist/deleteallbydisplayname?displayName=${displayName}`)
+        await axios.delete(`https://note-app-production-35a0.up.railway.app/notelist/deleteallbydisplayname?displayName=${displayName}`)
 
     }
 )

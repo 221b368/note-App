@@ -1,19 +1,19 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";  
+import { getAuth } from "firebase/auth"; 
+import { getAnalytics } from "firebase/analytics"; 
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC_oTpaEYRJE0Xo7m7v9g5iQ21jiT3YBxU",
-  authDomain: "mountainnoteproject.firebaseapp.com",
-  projectId: "mountainnoteproject",
-  storageBucket: "mountainnoteproject.firebasestorage.app",
-  messagingSenderId: "1050052548797",
-  appId: "1:1050052548797:web:3d01b0e1b492d6fdb1ffd4",
-  measurementId: "G-GYGE5RJ9FD"
-};
+    apiKey: "AIzaSyBV-45VPMvxu8WjNKYqQs3USNwid10gZhs",
+    authDomain: "mountain-note-app.firebaseapp.com",
+    projectId: "mountain-note-app",
+    storageBucket: "mountain-note-app.firebasestorage.app",
+    messagingSenderId: "736976945146",
+    appId: "1:736976945146:web:78ce0e73de2679a370ae43"
+  };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);
-const analytics = getAnalytics(app);
+export const analytics = getAnalytics(app);

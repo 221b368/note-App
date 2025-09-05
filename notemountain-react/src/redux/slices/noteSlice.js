@@ -8,60 +8,60 @@ const initialState = {
 
 export const getNotesByDisplayNameAndNoteListIdDesc = createAsyncThunk("notes/getNotesByDisplayNameAndNoteListIdDesc",
     async (body) => {
-        const response = await axios.get(`http://localhost:8080/note/findallbydisplaynameandnotelistiddesc?displayName=${body.displayName}&noteListId=${body.noteListId}`)
+        const response = await axios.get(`https://note-app-production-35a0.up.railway.app/note/findallbydisplaynameandnotelistiddesc?displayName=${body.displayName}&noteListId=${body.noteListId}`)
         return response.data
     }
 )
 
 export const getNoteById = createAsyncThunk("note/getNoteById",
     async (id) => {
-        const response = await axios.get("http://localhost:8080/note/getbyid?id=" + id)
+        const response = await axios.get("https://note-app-production-35a0.up.railway.app/note/getbyid?id=" + id)
         return response.data
     }
 )
 
 export const createNote = createAsyncThunk("notes/createNote",
     async (note) => {
-        const response = await axios.post("http://localhost:8080/note/add", note)
+        const response = await axios.post("https://note-app-production-35a0.up.railway.app/note/add", note)
         return response.data
     }
 )
 
 export const removeNote = createAsyncThunk("notes/deleteNote",
     async (id) => {
-        await axios.delete("http://localhost:8080/note/deletebyid?id=" + id)
+        await axios.delete("https://note-app-production-35a0.up.railway.app/note/deletebyid?id=" + id)
     }
 )
 
 export const updateNote = createAsyncThunk("notes/updateNote",
     async (body) => {
-        await axios.put(`http://localhost:8080/note/updatebyid?id=${body.id}`, body)
+        await axios.put(`https://note-app-production-35a0.up.railway.app/note/updatebyid?id=${body.id}`, body)
     }
 )
 
 export const getAllByHeaderOrContentContains = createAsyncThunk("notes/getAllByHeaderOrContentStartsWith",
     async (body) => {
-        const response = await axios.get(`http://localhost:8080/note/findallbyheaderorcontentcontains?prefix=${body.prefix}&displayName=${body.displayName}`)
+        const response = await axios.get(`https://note-app-production-35a0.up.railway.app/note/findallbyheaderorcontentcontains?prefix=${body.prefix}&displayName=${body.displayName}`)
         return response.data
     }
 )
 
 export const getAllByDisplayName = createAsyncThunk("notes/getAllByDisplayName",
     async (displayName) => {
-        const response = await axios.get(`http://localhost:8080/note/findallbydisplaynamedesc?displayName=${displayName}`)
+        const response = await axios.get(`https://note-app-production-35a0.up.railway.app/note/findallbydisplaynamedesc?displayName=${displayName}`)
         return response.data
     }
 )
 
 export const deleteAllByDisplayName = createAsyncThunk("notes/deleteAllByDisplayName",
     async (displayName) => {
-        await axios.delete(`http://localhost:8080/note/deleteallbydisplayname?displayName=${displayName}`)
+        await axios.delete(`https://note-app-production-35a0.up.railway.app/note/deleteallbydisplayname?displayName=${displayName}`)
     }
 )
 
 export const getAllByHeaderOrContentContainsAndNoteListId = createAsyncThunk("notes/getAllByHeaderOrContentContainsAndNoteListId",
     async (body) => {
-        const response = await axios.get(`http://localhost:8080/note/findallbyheaderorcontentcontainsanddisplaynameandnotelistid?prefix=${body.prefix}&displayName=${body.displayName}&noteListId=${body.noteListId}`)
+        const response = await axios.get(`https://note-app-production-35a0.up.railway.app/note/findallbyheaderorcontentcontainsanddisplaynameandnotelistid?prefix=${body.prefix}&displayName=${body.displayName}&noteListId=${body.noteListId}`)
         return response.data
     }
 )
